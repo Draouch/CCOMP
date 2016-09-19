@@ -5,7 +5,7 @@ void *_strcat(char *s, char *t){
 	while(*s)
 		++s;
 
-	while(*s++ = *t++)
+	while((*s++ = *t++))
 		;
 	
 	return 0;
