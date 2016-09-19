@@ -1,14 +1,13 @@
 #include <stdio.h>
 
-void *_strcat(char *s, char *t){
+void _strcat(char *s, char *t){
 	
 	while(*s)
-		++s;
-
-	while((*s++ = *t++))
-		;
+		  ++s;
 	
-	return 0;
+	while((*s++ = *t++))
+		  ;
+	
 }
 
 int main(){
