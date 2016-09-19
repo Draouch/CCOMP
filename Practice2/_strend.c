@@ -1,10 +1,12 @@
 #include <stdio.h>
 
-int len(char s[]){
+int len(char *s){
 	
 	int i;
-	for(i = 0; s[i] != '\0'; i++)
-		;
+	
+	for(i = 0; *s != '\0'; i++)
+		++s;
+		
 	return i;
 }
 
@@ -13,7 +15,7 @@ int _strend(char s[], char t[]){
 	
 	int ls = len(s);
 	int lt = len(t);
-		
+	
 	
 	while(s[ls-1] == t[lt-1]){
 		ls--;
@@ -21,10 +23,10 @@ int _strend(char s[], char t[]){
 	}
 	
 	if(lt == 0)
-		return 1;
+	   return 1;
 	else
 		return 0;
-
+	
 }
 
 int main(){
@@ -36,3 +38,4 @@ int main(){
 	
 	return 0;
 }
+
