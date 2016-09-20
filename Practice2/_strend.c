@@ -6,21 +6,19 @@ int len(char *s){
 	
 	for(i = 0; *s != '\0'; i++)
 		++s;
-		
+	
 	return i;
 }
 
 
 int _strend(char s[], char t[]){
 	
-	int ls = len(s);
-	int lt = len(t);
+	int ls;
+	int lt;
 	
 	
-	while(s[ls-1] == t[lt-1]){
-		ls--;
-		lt--;
-	}
+	for(ls = len(s), lt = len(t); s[ls-1] == t[lt-1]; ls--, lt--)
+		;
 	
 	if(lt == 0)
 	   return 1;
@@ -38,4 +36,3 @@ int main(){
 	
 	return 0;
 }
-
