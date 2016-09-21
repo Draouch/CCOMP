@@ -1,13 +1,13 @@
 #include<stdio.h>
 
-void _strncpy(char *src, char *dest, int i) {
+void _strncpy(char *s, char *t, int i) {
 	
 	while(i--)
-			
-		*dest++ = *src++;
+		  
+		  *t++ = *s++;
 	
-	*dest = '\0';
-
+	*t = '\0';
+	
 }
 
 int main(){
@@ -15,7 +15,7 @@ int main(){
 	char s[] = "Hola";
 	char t[100];
 	
-	_strncpy(s, t, 1);
+	_strncpy(s, t, 2);
 	
 	printf(t);
 	
