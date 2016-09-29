@@ -1,17 +1,5 @@
 #include<stdio.h>
 
-int strindex(char *s, char *t);
-
-int main(){
-	
-	char s[] = "anan";
-	char t[] = "n";
-	
-	printf("%d", strindex(s, t));
-	
-	return 0;
-	
-}
 
 int strindex(char *s, char *t){
 	
@@ -29,5 +17,15 @@ int strindex(char *s, char *t){
 	}
 	
 	return -1;
+	
+}
+int main(){
+	
+	char s[] = "Mari";
+	char t[] = "a";
+	
+	printf("%d", strindex(s, t));
+	
+	return 0;
 	
 }
