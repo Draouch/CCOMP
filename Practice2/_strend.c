@@ -1,15 +1,5 @@
 #include <stdio.h>
 
-void _strcat(char *s, char *t){
-	
-	while(*s)
-		s++;
-	
-	while((*s++ = *t++))
-		;
-	
-}
-
 int _strend(char *s, char *t){
 	
 	int cont = 0;
