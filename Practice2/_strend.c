@@ -1,30 +1,39 @@
 #include <stdio.h>
 
-int len(char *s){
+void _strcat(char *s, char *t){
 	
-	int i;
+	while(*s)
+		s++;
 	
-	for(i = 0; *s != '\0'; i++)
-		++s;
-	
-	return i;
-}
-
-
-int _strend(char s[], char t[]){
-	
-	int ls;
-	int lt;
-	
-	
-	for(ls = len(s), lt = len(t); s[ls-1] == t[lt-1]; ls--, lt--)
+	while((*s++ = *t++))
 		;
 	
-	if(lt == 0)
-	   return 1;
-	else
-		return 0;
+}
+
+int _strend(char *s, char *t){
 	
+	int cont = 0;
+	
+	for(; *s; s++)
+		;
+	
+	for(; *t; t++)
+		cont++;
+	
+	while(cont != 0){
+	
+		if(*s == *t){
+			cont--;
+			t--;
+			s--;
+		}
+	
+		else
+			return 0;
+	
+	}
+	
+	return 1;
 }
 
 int main(){
