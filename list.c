@@ -32,7 +32,7 @@ struct node *createlist(int n){
 	}
 	
 	else
-		return 0;
+	   return 0;
 	
 }
 
@@ -42,10 +42,10 @@ struct node *createlistinverse(int n){
 	int i;
 	if(n != 0){
 		head = malloc(sizeof(struct node));
-		head -> val = 7;
+		head -> val = n;
 		prev = head;
 		
-		for(i = 6; i >= 1; i--){
+		for(i = n - 1; i >= 1; i--){
 			
 			cur = malloc (sizeof(struct node));
 			cur -> val = i;
@@ -60,7 +60,7 @@ struct node *createlistinverse(int n){
 	}
 	
 	else
-		return 0;
+	   return 0;
 	
 }
 
@@ -191,7 +191,7 @@ int main(){
 	/*insertmiddle(node1, 9);*/
 	/*sortlist(node2);*/
 	/*concatenatelist(node1, node2);*/
-	print(node1);
+	print(node2);
 	/*print(node2);*/
 	
 	return 0;
