@@ -1,7 +1,5 @@
 #include "point.h"
 
-using namespace std;
-
 double Point::getX(){
 	
 	return x;
