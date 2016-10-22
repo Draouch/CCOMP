@@ -77,16 +77,18 @@ public:
 		points = new Point[size];
 		for(int i = 0; i < size; i++)
 			points[i] = pv.points[i];
-	
+			
 	}
 	
 	void resize(int newSize);
 	
 	int getSize() const;
 	
+	int Size() const;
+	
 	void clear();
 	
-	void push_back(Point &p);
+	void push_back(const Point &p);
 	
 	void insert(const int pos, const Point &p);
 	
