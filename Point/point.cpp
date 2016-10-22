@@ -1,5 +1,7 @@
 #include "point.h"
 
+using namespace std;
+
 double Point::getX(){
 	
 	return x;
@@ -26,7 +28,7 @@ void Point::setY(double ny){
 
 void Point::printPoint(){
 	
-	cout << x << ", " << y << endl;
+	cout << "point(" << x  << ", "  << y << "): " << endl;
 	
 }
 
@@ -43,20 +45,28 @@ void PointArray::resize(int newSize){
 	int minSize = (newSize > size ? size : newSize);
 	for(int i = 0; i < minSize; i++)
 		points[i] = points[i];
-	delete[] points;
-	size = newSize;
-	points = pts;
-	
+		delete[] points;
+		size = newSize;
+		points = pts;
+		
 }
 
 void PointArray::printArr(){
 	
 	for(int i=0; i < size; i++) 
-		cout << "point[" << i << "]: " << points[i].getX() << ", " << points[i].getY() << endl;
-	
+		cout << "point[" << i << "]: " << "( " << points[i].getX() << ", " << points[i].getY()<< " )" << endl;
+		
 }
 
 int PointArray::getSize() const{
+	
+	cout<<size<<endl;
+	
+	return 0;
+	
+}
+
+int PointArray::Size() const{
 	
 	return size;
 	
@@ -68,7 +78,7 @@ void PointArray::clear(){
 	
 }
 
-void PointArray::push_back(Point &p){
+void PointArray::push_back(const Point &p){
 	
 	resize(size + 1);
 	points[size - 1] = p;
@@ -81,8 +91,8 @@ void PointArray::insert(const int pos, const Point &p){
 	
 	for(int i = size - 1; i > pos; i--)
 		points[i] = points[i - 1];
-	
-	points[pos] = p;
+		
+		points[pos] = p;
 }
 
 void PointArray::remove(const int pos){
