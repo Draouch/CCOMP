@@ -1,7 +1,5 @@
 #include "point.cpp"
 
-using namespace std;
-
 int main(){
 	
 	Point x;
