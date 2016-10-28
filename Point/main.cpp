@@ -1,5 +1,19 @@
-#include "point.cpp"
-#include "vector.cpp"
+#include "geometry.cpp"
+
+void printAttributes(Polygon *pol){
+	if (pol -> getNumSides() == 4){
+		cout << "El area del rectangulo es: " << pol -> area() << endl;
+	}
+	else if (pol -> getNumSides() == 3){
+		cout << "El area del triangulo es: " << pol -> area() << endl;
+	}
+	
+	cout << "Puntos\t(x, y)" << endl;
+	for (int i = 0; i < pol->getNumSides(); i++){
+		cout << "Punto" << i + 1 << ":\t" << "(" << pol->getPoints()->get(i)->
+			getX() << ", " << pol->getPoints()->get(i)->getY() << ")" << endl;
+	}
+}
 
 int main(){
 	
@@ -130,6 +144,23 @@ int main(){
 	
 	arrvec.remove(0);
 	arrvec.printArr();
+	
+	cout<<"\n"<<endl;
+	cout<<"///////////////////////////////////////////////////////////"<<endl;
+	cout<<"\n"<<endl;
+	
+	cout << " Enter lower left and upper right coords of rectangle as four space separated integers : ";
+	int llx , lly , urx , ury;
+	cin >> llx >> lly >> urx >> ury;
+	Point ll(llx , lly), ur(urx , ury);
+	Rectangle r(ll , ur);
+	printAttributes (&r);
+	cout << " Enter three coords of triangle as six space separated integers : ";
+	int x1 , y1 , x2 , y2 , x3 , y3;
+	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
+	Point a(x1 , y1), b(x2 , y2), c(x3 , y3);
+	Triangle t(a, b, c);
+	printAttributes (&t);
 	
 	return 0;
 	

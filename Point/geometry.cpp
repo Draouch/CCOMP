@@ -14,12 +14,6 @@ Polygon::Polygon(const Point pointArr[], const int numPoints) : points(pointArr,
 	
 }
 
-/*Polygon::Polygon(const Polygon &pol) : points(pol.points) {
-
-	++numPolygons;
-
-}*/
-
 //Rectangle
 Point constructorRPoints[4];
 
@@ -38,11 +32,12 @@ Rectangle::Rectangle(const Point &p1, const Point &p2)
 
 Rectangle::Rectangle(const int p1x, const int p1y,
 					 const int p2x, const int p2y)
-	: Polygon{updateConstructorRPoints(Point(p1x, p1y), Point(p1x, p2y),
-									  Point(p2x, p2y), Point(p2x, p1y) ), 4} {}
+	: Polygon(updateConstructorRPoints(Point(p1x, p1y), Point(p1x, p2y),
+									  Point(p2x, p2y), Point(p2x, p1y) ), 4) {}
 
 double Rectangle::area() const{
 	
+		
 	int length = points.get(1) -> getY() - points.get(0) -> getY();
 	int width  = points.get(2) -> getX() - points.get(1)  -> getX();
 	

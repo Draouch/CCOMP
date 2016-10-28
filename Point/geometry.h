@@ -1,8 +1,7 @@
-#include <iostream>
 #include <stdlib.h>
 #include <math.h>
-#include "point.cpp"
-using namespace std;
+#include "vector.cpp"
+
 
 class Polygon{
 	
@@ -15,8 +14,7 @@ public:
 	
 	Polygon(const PointArray &pa);
 	Polygon(const Point points[], const int numPoints);
-	//Polygon(const Polygon &pol);
-	virtual double getArea() const = 0;
+	virtual double area() const = 0;
 	int getNumPolygons() const {return numPolygons;}
 	int getNumSides() const {return points.getSize();}
 	const PointArray *getPoints() const {return &points;}
