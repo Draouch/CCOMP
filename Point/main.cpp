@@ -1,4 +1,5 @@
 #include "point.cpp"
+#include "vector.cpp"
 
 int main(){
 	
