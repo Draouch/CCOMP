@@ -1,12 +1,12 @@
 #include "point.h"
 
-double Point::getX(){
+double Point::getX() const{
 	
 	return x;
 	
 }
 
-double Point::getY(){
+double Point::getY() const{
 	
 	return y;
 	
@@ -88,6 +88,18 @@ void PointArray::remove(const int pos){
 		}
 		resize (size - 1);
 	}
+	
+}
+
+Point *PointArray::get(const int pos){
+	
+	return pos >= 0 && pos < size ? points + pos : NULL;
+	
+}
+
+const Point *PointArray::get(const int pos) const{
+	
+	return pos >= 0 && pos < size ? points + pos : NULL;
 	
 }
 

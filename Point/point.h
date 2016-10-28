@@ -30,9 +30,9 @@ public:
 		
 	}
 	
-	double getX();
+	double getX() const;
 	
-	double getY();
+	double getY() const;
 	
 	void setX(double nx);
 	
@@ -61,7 +61,7 @@ public:
 		
 	}
 	
-	PointArray (Point ptsToCopy[], int toCopySize){
+	PointArray (const Point ptsToCopy[], const int toCopySize){
 		
 		size = toCopySize ;
 		points = new Point [ toCopySize ];
@@ -71,7 +71,7 @@ public:
 	}
 	
 	
-	PointArray(PointArray &pv){
+	PointArray(const PointArray &pv){
 		
 		size = pv.size;
 		points = new Point[size];
@@ -91,6 +91,10 @@ public:
 	void insert(const int pos, const Point &p);
 	
 	void remove(const int pos);
+	
+	Point *get(const int pos);
+	
+	const Point *get(const int pos) const;
 	
 	void printArr();
 	
