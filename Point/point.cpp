@@ -51,9 +51,7 @@ void PointArray::resize(int newSize){
 
 int PointArray::getSize() const{
 	
-	cout<<size<<endl;
-	
-	return 0;
+	return size;
 	
 }
 
