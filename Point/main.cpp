@@ -149,13 +149,13 @@ int main(){
 	cout<<"///////////////////////////////////////////////////////////"<<endl;
 	cout<<"\n"<<endl;
 	
-	cout << " Enter lower left and upper right coords of rectangle as four space separated integers : ";
+	cout << "Ingrese las dos coordenadas del rectangulo esq. inf. e esq. sup: ";
 	int llx , lly , urx , ury;
 	cin >> llx >> lly >> urx >> ury;
 	Point ll(llx , lly), ur(urx , ury);
 	Rectangle r(ll , ur);
 	printAttributes (&r);
-	cout << " Enter three coords of triangle as six space separated integers : ";
+	cout << "Ingrese las 3 coordenadas del triangulo : ";
 	int x1 , y1 , x2 , y2 , x3 , y3;
 	cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3;
 	Point a(x1 , y1), b(x2 , y2), c(x3 , y3);
