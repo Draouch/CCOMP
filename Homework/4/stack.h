@@ -1,20 +1,63 @@
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
-template<typename K>
-class Stack_{
+template<typename T> class Stack;
 
-private:
-	vector<K> Pila;
+template<typename T>
+Stack<T> operator+(const Stack<T> &s1, const Stack<T> &s2){
+	
+    Stack<T> res = s1;
 
+    for (unsigned i = 0; i < s2.Stack.size(); i++)
+        res.Stack.push_back(s2.Stack[i]);
+		
+    return res;
+	
+}
+
+template<typename T>
+class Stack{
+	
+    friend Stack<T> operator+<>(const Stack<T> &, const Stack<T> &);
+	
 public:
-	void if_empty();
-	K top();
-	void push(K x);
-	void pop();
-	void print();
-	friend Stack_ operator+<>(const Stack_ &k1, const Stack_ &k2);
-
+    bool empty() const;
+    void push(const T &);
+    T &top();
+    void pop();
+private:
+    vector <T> Stack;
+	
 };
+
+template<typename T>
+bool Stack<T>::empty() const{
+	
+    return Stack.empty();
+	
+}
+
+template<typename T>
+void Stack<T>::push(const T &elem){
+	
+    Stack.push_back(elem);
+	
+}
+
+template<typename T>
+T &Stack<T>::top(){
+	
+    return Stack.back();
+	
+}
+
+template<typename T>
+void Stack<T>::pop(){
+	
+    if (Stack.empty())
+        return;
+    else
+        Stack.pop_back();
+		
+}
