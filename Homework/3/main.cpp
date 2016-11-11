@@ -167,8 +167,8 @@ int main(){
 	cout<<"\n"<<endl;
 	
 	Rectangle *rect;
-	reinterpret_cast<Triangle*>(rect);
-	dynamic_cast<Triangle*>(rect);
+	Triangle *tr1 = reinterpret_cast<Triangle*>(rect);
+	Triangle *tr2 = dynamic_cast<Triangle*>(rect);
 	
 	return 0;
 	
