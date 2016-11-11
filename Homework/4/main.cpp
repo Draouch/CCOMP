@@ -1,17 +1,21 @@
-#include "stack.cpp"
+#include <iostream>
+#include "_stack.h"
 
-	int main(){
+int main(){
+	
+    Stack <int> j;
+    j.push(3);
+    j.push(4);
+    j.pop();
+    cout << j.top() << endl;
 
-		Stack_<int> kri, al;
-		//Stack_<int> cor = kri + al;
-		kri.push(2);
-		kri.push(3);
-		kri.push(4);
-		kri.print();
-		al.push(5);
-		al.push(6);
-		al.push(7);
-		al.print();
-		//cor.print();
+    Stack<int> k;
+    k.push(8);
+    k.push(11);
 
-	}
+    Stack<int> l = j + k;
+    cout << l.top() << endl;
+	
+    return 0;
+	
+}
