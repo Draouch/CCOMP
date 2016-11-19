@@ -3,7 +3,9 @@
 CONTROLES
 
    Esc: Salir del juego.
+   
    E: Spawnear más enemigos.
+   
    Space Bar: Disparar misiles.
 
 REQUISITOS
