@@ -1,5 +1,11 @@
 # RPG
 
+CONTROLES
+
+   Esc: Salir del juego.
+   E: Spawnear más enemigos.
+   Space Bar: Disparar misiles.
+
 REQUISITOS
 
 -> Code::Blocks (16.01 en adelante).
