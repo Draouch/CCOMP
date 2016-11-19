@@ -18,7 +18,7 @@ class Jugador: public Objeto{
         bool IrAbajo = true;
         bool IrIzquierda = true;
         bool IrDerecha = true;
-        int poderAtaque = 25;
+        int poderAtaque = 50;
         int kills = 0;
         int direccion = 2; //1 = ARRIBA, 2 = ABAJO, 3 = IZQUIERDA, 4 = DERECHA
         int score;

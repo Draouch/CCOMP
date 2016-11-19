@@ -42,6 +42,10 @@
 		<Unit filename="Enemigo.cpp" />
 		<Unit filename="Enemigo.h" />
 		<Unit filename="Enemigos.png" />
+		<Unit filename="Funciones.cpp" />
+		<Unit filename="Funciones.h" />
+		<Unit filename="Game.cpp" />
+		<Unit filename="Game.h" />
 		<Unit filename="Groudon.ogg" />
 		<Unit filename="Groudon.png" />
 		<Unit filename="Item.cpp" />

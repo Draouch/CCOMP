@@ -1044,7 +1044,7 @@ void Game(){
         Item1.inTienda = false;
 
     //*************************************************GAME**************************************************************************************
-      if(Jugador1.hp > 0){
+
         while(window.isOpen()){
             //Hacer funcionar el boton para salir de la ventana
             Event event;
@@ -1057,8 +1057,9 @@ void Game(){
                 }
             }
             //Crear un boton para salir del juego
-            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape)){
+            if (sf::Keyboard::isKeyPressed(sf::Keyboard::Escape) || Jugador1.hp <= 0){
 
+                system("cls");
                 window.close();
 
             }
@@ -2059,11 +2060,8 @@ void Game(){
             window.display();
 
         }
-      }
-      else{
 
-        window.close();
+        system("cls");
         GameOver();
-      }
 
 }

@@ -26,7 +26,7 @@
 	<SFML/Graphics.hpp>
 	<iostream>
 
-1479589144 c:\users\draou\desktop\game-cci\jugador.h
+1479594086 c:\users\draou\desktop\game-cci\jugador.h
 	"Objeto.h"
 	<SFML/Graphics.hpp>
 
@@ -86,7 +86,7 @@
 1479573619 c:\users\draou\desktop\game-cci\item.h
 	"Objeto.h"
 
-1479592480 source:c:\users\draou\desktop\game-cci\game.cpp
+1479594043 source:c:\users\draou\desktop\game-cci\game.cpp
 	"Game.h"
 
 1479590794 c:\users\draou\desktop\game-cci\funciones.cpp
@@ -101,7 +101,7 @@
 1479592507 source:c:\users\draou\desktop\game-cci\funciones.cpp
 	"Funciones.h"
 
-1479591616 c:\users\draou\desktop\game-cci\game.h
+1479594043 c:\users\draou\desktop\game-cci\game.h
 	<iostream>
 	<vector>
 	"Objeto.h"
