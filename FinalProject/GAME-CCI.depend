@@ -1,0 +1,121 @@
+# depslib dependency file v1.0
+1479583121 source:c:\users\draou\desktop\game-cci\enemigo.cpp
+	"Enemigo.h"
+	"Objeto.h"
+	"Random.h"
+	<SFML/Graphics.hpp>
+	<iostream>
+	<vector>
+
+1479573753 c:\users\draou\desktop\game-cci\enemigo.h
+	"Objeto.h"
+	"Random.h"
+	<vector>
+	<SFML/Graphics.hpp>
+
+1479583365 c:\users\draou\desktop\game-cci\objeto.h
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1479583157 c:\users\draou\desktop\game-cci\random.h
+	<iostream>
+
+1479583595 source:c:\users\draou\desktop\game-cci\jugador.cpp
+	"Jugador.h"
+	"Objeto.h"
+	<SFML/Graphics.hpp>
+	<iostream>
+
+1479589144 c:\users\draou\desktop\game-cci\jugador.h
+	"Objeto.h"
+	<SFML/Graphics.hpp>
+
+1479574721 source:c:\users\draou\desktop\game-cci\objeto.cpp
+	"Objeto.h"
+
+1479572137 source:c:\users\draou\desktop\game-cci\pared.cpp
+	"Pared.h"
+
+1479572137 c:\users\draou\desktop\game-cci\pared.h
+	"Objeto.h"
+
+1479186808 source:c:\users\draou\desktop\game-cci\pickup.cpp
+	"pickup.h"
+	<SFML/Graphics.hpp>
+
+1479255804 c:\users\draou\desktop\game-cci\pickup.h
+	"Objeto.h"
+
+1479226500 source:c:\users\draou\desktop\game-cci\projectile.cpp
+	<iostream>
+	"projectile.h"
+	"Objeto.h"
+	<SFML/Graphics.hpp>
+
+1479226500 c:\users\draou\desktop\game-cci\projectile.h
+	"Objeto.h"
+
+1479583397 source:c:\users\draou\desktop\game-cci\random.cpp
+	"Random.h"
+	<ctime>
+	<cstdlib>
+
+1479590892 source:c:\users\draou\desktop\game-cci\main.cpp
+	"Funciones.h"
+
+1479575009 c:\users\draou\desktop\game-cci\texto.h
+	"Objeto.h"
+	<string>
+
+1479574615 source:c:\users\draou\desktop\game-cci\disparo.cpp
+	"Disparo.h"
+	<SFML/Graphics.hpp>
+
+1479591177 c:\users\draou\desktop\game-cci\disparo.h
+	"Objeto.h"
+
+1479574845 source:c:\users\draou\desktop\game-cci\texto.cpp
+	"Texto.h"
+	<sstream>
+	<string>
+
+1479573656 source:c:\users\draou\desktop\game-cci\item.cpp
+	"Item.h"
+	<SFML/Graphics.hpp>
+
+1479573619 c:\users\draou\desktop\game-cci\item.h
+	"Objeto.h"
+
+1479592480 source:c:\users\draou\desktop\game-cci\game.cpp
+	"Game.h"
+
+1479590794 c:\users\draou\desktop\game-cci\funciones.cpp
+	"Funciones.h"
+
+1479590892 c:\users\draou\desktop\game-cci\funciones.h
+	"Game.h"
+
+1479590705 c:\users\draou\desktop\game-cci\game.cpp
+	"Game.h"
+
+1479592507 source:c:\users\draou\desktop\game-cci\funciones.cpp
+	"Funciones.h"
+
+1479591616 c:\users\draou\desktop\game-cci\game.h
+	<iostream>
+	<vector>
+	"Objeto.h"
+	"Jugador.h"
+	"Disparo.h"
+	"Enemigo.h"
+	"Item.h"
+	"Texto.h"
+	"Pared.h"
+	"Funciones.h"
+	<SFML/Graphics.hpp>
+	<SFML/Audio.hpp>
+	<cstdlib>
+	<ctime>
+	<string>
+	<windows.h>
+
