@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1479055166 source:c:\users\draou\desktop\ipoo\game\arma.cpp
+	"Arma.h"
+
+1479055166 c:\users\draou\desktop\ipoo\game\arma.h
+	<iostream>
+	<string>
+
+1479055120 source:c:\users\draou\desktop\ipoo\game\funciones.cpp
+	<stdio.h>
+	<windows.h>
+	"Jugador.h"
+	"Arma.h"
+	"Funciones.h"
+	"Game.h"
+
+1478970501 c:\users\draou\desktop\ipoo\game\jugador.h
+	<iostream>
+	<string>
+
+1478731954 c:\users\draou\desktop\ipoo\game\funciones.h
+
+1478985901 c:\users\draou\desktop\ipoo\game\game.h
+
+1479055120 source:c:\users\draou\desktop\ipoo\game\game.cpp
+	<cstdlib>
+	<ctime>
+	<windows.h>
+	"Jugador.h"
+	"Arma.h"
+	"Funciones.h"
+	"Game.h"
+
+1478740096 source:c:\users\draou\desktop\ipoo\game\jugador.cpp
+	"Jugador.h"
+
+1478986140 source:c:\users\draou\desktop\ipoo\game\main.cpp
+	"Funciones.h"
+
