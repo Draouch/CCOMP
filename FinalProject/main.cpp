@@ -2,8 +2,9 @@
 
 int main(){
 
-    Menu();
-
+    Game* RPG = Game::getSingleton();
+    RPG -> Menu();
+    delete Game::getSingleton();
     return 0;
 
 }

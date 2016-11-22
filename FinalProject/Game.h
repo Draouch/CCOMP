@@ -19,6 +19,19 @@
 using namespace sf;
 using namespace std;
 
-void Game();
+class Game{
+
+private:
+
+    static Game* Singleton;
+
+public:
+
+    //Singleton
+    static Game* getSingleton();
+    void StartGame();
+    void Menu();
+
+};
 
 #endif

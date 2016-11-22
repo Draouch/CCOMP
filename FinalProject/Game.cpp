@@ -1,8 +1,67 @@
 #include "Game.h"
 
-void Menu();
+void Game::Menu(){
 
-void Game(){
+    StartScreen();
+    cout << endl;
+	cout<<"\t\t 1. Jugar..."<<endl;
+	Sleep(100);
+	cout<<"\t\t 2. Informacion..."<<endl;
+	Sleep(100);
+	cout<<"\t\t 3. Salir..."<<endl;
+
+	cout<<"\n";
+	Sleep(100);
+
+	cout<<"\t Selecciona una opcion: ";
+	int opcion;
+	cin>>opcion;
+
+	switch(opcion){
+
+        case 1:{
+
+            system("cls");
+            Game* RPG = Game::getSingleton();
+            RPG -> StartGame();
+
+        }
+        case 2:{
+
+            system("cls");
+            cout << endl << endl;
+            cout << "\t Hecho por Rodrigo Jesus Ali Guevara!\n";
+            PressAnyButton();
+            Menu();
+
+        }
+
+        case 3:{
+
+            system("cls");
+            GameOver();
+            exit(0);
+
+        }
+
+        default:{
+
+            system("cls");
+            cout << endl << endl;
+            cout << "\t\tIngresa una opcion valida.\n\n";
+            PressAnyButton();
+            Menu();
+
+        }
+
+	}
+
+}
+
+//Singleton
+Game* Game::Singleton = nullptr;
+
+void Game::StartGame(){
 
     srand(time(NULL));
     sf::Clock clock, clock2, clock3, clock4, clock5, clock6, clock7, clock8;
@@ -2063,5 +2122,14 @@ void Game(){
 
         system("cls");
         GameOver();
+
+}
+
+//Singleton
+Game* Game::getSingleton(){
+
+    if(!Singleton)
+        Singleton = new Game();
+    return Singleton;
 
 }

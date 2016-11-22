@@ -60,7 +60,7 @@
 	<ctime>
 	<cstdlib>
 
-1479590892 source:c:\users\draou\desktop\game-cci\main.cpp
+1479840656 source:c:\users\draou\desktop\game-cci\main.cpp
 	"Funciones.h"
 
 1479575009 c:\users\draou\desktop\game-cci\texto.h
@@ -86,22 +86,22 @@
 1479573619 c:\users\draou\desktop\game-cci\item.h
 	"Objeto.h"
 
-1479594043 source:c:\users\draou\desktop\game-cci\game.cpp
+1479840656 source:c:\users\draou\desktop\game-cci\game.cpp
 	"Game.h"
 
 1479590794 c:\users\draou\desktop\game-cci\funciones.cpp
 	"Funciones.h"
 
-1479590892 c:\users\draou\desktop\game-cci\funciones.h
+1479840656 c:\users\draou\desktop\game-cci\funciones.h
 	"Game.h"
 
 1479590705 c:\users\draou\desktop\game-cci\game.cpp
 	"Game.h"
 
-1479592507 source:c:\users\draou\desktop\game-cci\funciones.cpp
+1479840656 source:c:\users\draou\desktop\game-cci\funciones.cpp
 	"Funciones.h"
 
-1479594043 c:\users\draou\desktop\game-cci\game.h
+1479840656 c:\users\draou\desktop\game-cci\game.h
 	<iostream>
 	<vector>
 	"Objeto.h"
