@@ -1,97 +1,60 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-typedef int Cable; // wire with electrons :-)
+typedef int Coordinate;
+typedef int Dimension;
 
-/* Adaptee (source) interface */
-class EuropeanSocketInterface{
-	
+// Desired interface
+class Rectangle
+{
 public:
-	virtual int voltage() = 0;
-	
-	virtual Cable live() = 0;
-	virtual Cable neutral() = 0; 
-	virtual Cable earth() = 0;
+	virtual void draw() = 0;
 };
 
-/* Adaptee */
-class Socket : public EuropeanSocketInterface{
-	
+// Legacy component
+class LegacyRectangle
+{
 public:
-	int voltage() { return 230; }
-	
-	Cable live() { return 1; }
-	Cable neutral() { return -1; }
-	Cable earth() { return 0; }
-};
-
-/* Target interface */
-class USASocketInterface{
-	
-public:
-	virtual int voltage() = 0;
-	
-	virtual Cable live() = 0;
-	virtual Cable neutral() = 0;
-};
-
-/* The Adapter */
-class Adapter : public USASocketInterface{
-	
-	EuropeanSocketInterface* socket;
-	
-public:
-	void plugIn(EuropeanSocketInterface* outlet){
-		
-		socket = outlet;
+	LegacyRectangle(Coordinate x1, Coordinate y1, Coordinate x2, Coordinate y2)
+	{
+		x1_ = x1;
+		y1_ = y1;
+		x2_ = x2;
+		y2_ = y2;
+		cout << "LegacyRectangle:  create.  (" << x1_ << "," << y1_ << ") => ("
+			<< x2_ << "," << y2_ << ")" << endl;
 	}
-	
-	int voltage() { return 110; }
-	Cable live() { return socket->live(); }
-	Cable neutral() { return socket->neutral(); }
+	void oldDraw()
+	{
+		cout << "LegacyRectangle:  oldDraw.  (" << x1_ << "," << y1_ << 
+			") => (" << x2_ << "," << y2_ << ")" << endl;
+	}
+private:
+	Coordinate x1_;
+	Coordinate y1_;
+	Coordinate x2_;
+	Coordinate y2_;
 };
 
-/* Client */
-class ElectricKettle{
-	
-	USASocketInterface* power;
-	
+// Adapter wrapper
+class RectangleAdapter: public Rectangle, private LegacyRectangle
+{
 public:
-	
-	void plugIn(USASocketInterface* supply){
-		
-		power = supply;
-	}
-	
-	void boil(){
-		
-		if (power->voltage() > 110){
-			
-			std::cout << "Kettle is on fire!" << std::endl;
-			return;
-		}
-		
-		if (power->live() == 1 && power->neutral() == -1)
-		{
-			cout << "Coffee time!" << std::endl;
-		}
-	}
+	RectangleAdapter(Coordinate x, Coordinate y, Dimension w, Dimension h):
+					 LegacyRectangle(x, y, x + w, y + h)
+	{
+						 cout << "RectangleAdapter: create.  (" << x << "," << y << 
+							 "), width = " << w << ", height = " << h << endl;
+					 }
+					 virtual void draw()
+					 {
+						 cout << "RectangleAdapter: draw." << endl;
+						 oldDraw();
+					 }
 };
 
-
-int main(){
-	
-	Socket* socket = new Socket;
-	Adapter* adapter = new Adapter;
-	ElectricKettle* kettle = new ElectricKettle;
-	
-	/* Pluging in. */
-	adapter->plugIn(socket);
-	kettle->plugIn(adapter);
-	
-	/* Having coffee */
-	kettle->boil();
-	
-	return 0;
+int main()
+{
+	Rectangle *r = new RectangleAdapter(120, 200, 60, 40);
+	r->draw();
 }
