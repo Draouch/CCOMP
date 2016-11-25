@@ -3,9 +3,9 @@
 ARGUMENTO
 
    Eres Mewtwo y debes acabar con todos tus enemigos para lograr que la paz vuelva al bosque.
-   Dispones de misiles los cuales puedes usar presionando Espacio. Encontrarás caas por el camino, los cuales te darán Powerups
-   para ayudarte en tu aventura. Hay 3 tipos de Powerups, DESCÚBRELOS TODOS! Lamentablemente si te hacen daño los puedes
-   perder... Cada enemigo tiene un ataque y vida distinto, y además... hay un JEFE FINAL! ¿Podrás acabar con él?
+   Dispones de misiles los cuales puedes usar presionando Espacio. Encontrarás cajas por el camino, las cuales te darán Powerups
+   para ayudarte en tu aventura. Hay 3 tipos de Powerups, DESCÚBRELOS TODOS! Lamentablemente si te hacen daño los perderás...
+   Cada enemigo tiene un ataque y vida distintos, y además... hay un JEFE FINAL! ¿Podrás acabar con él?
 
 CONTROLES
 
