@@ -14,6 +14,8 @@ CONTROLES
    E: Spawnear más enemigos.
    
    Espacio: Disparar misiles.
+   
+   Teclas Direccionales: Mover tu personaje.
 
 REQUISITOS
 
